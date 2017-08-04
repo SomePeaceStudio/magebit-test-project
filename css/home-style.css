@@ -1,0 +1,32 @@
+body{
+	font-family: Arial,sans-serif, serif;
+}
+.container{
+	margin-top: 80px;
+}
+.content{
+	margin: 100px auto;
+	text-align: center;
+	font-size: 30px;
+	color: #0A9FFF;
+}
+.header{
+	height: 50px;
+	width: 100%;
+	background-color: #2C3656;
+	position: relative;
+}
+.header label{
+	display: block;
+	height: 50px;
+	position: absolute;
+	right: 10px;
+}
+.header label a{
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	line-height: 50px;
+
+}

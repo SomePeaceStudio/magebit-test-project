@@ -1,0 +1,450 @@
+body{
+	background-color: white;
+	font-family: arial, sans, serif;
+}
+
+button, input[type=submit]{
+	cursor: pointer;
+}
+
+/********* Background image animation **********/
+
+.background-wrapper{
+	position: absolute;
+	top:0;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	    transform: translateX(-50%);
+	height: 800px;
+	width: 1360px;
+    overflow: hidden;
+}
+.page-background{
+	background: url(../images/background.jpg);
+	background-size: cover;
+    background-repeat: no-repeat;
+	background-position: center top;
+	position: absolute;
+	height: 100%;
+    width: 100%;
+    -webkit-animation: bganim 11s infinite linear;
+    animation: bganim 11s infinite linear;
+
+}
+@-webkit-keyframes bganim {
+    0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+    50% {
+		-webkit-transform: scale(1.2);
+		transform: scale(1.2);
+    }
+    100%{
+		-webkit-transform: scale(1);
+		transform: scale(1);
+    }
+}
+@keyframes bganim {
+    0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+    50% {
+		-webkit-transform: scale(1.2);
+		transform: scale(1.2);
+    }
+    100%{
+		-webkit-transform: scale(1);
+		transform: scale(1);
+    }
+}
+
+/****************************************************/
+/********* Inactive Content *************************/
+/****************************************************/
+
+.page-wrapper{
+	margin: 190px auto 0 auto;
+	width: 920px;
+	height: 420px;
+	position: relative;
+}
+
+.content-inactive{
+	background-color: #1b2347;
+	display: block;
+	width: 920px;
+	height: 420px;
+	opacity: 0.9;
+	color: white;
+}
+.content-inactive h3{
+	font-size: 19px;
+}
+.content-inactive img{
+	padding-top: 34px;
+}
+.content-inactive p{
+	padding-top: 30px;
+	font-size: 11px;
+	line-height: 22px;
+	font-weight: bold;
+}
+.content-inactive button{
+	margin-top: 30px;
+	width: 140px;
+	height: 50px;
+	border-radius: 50px;
+	text-transform: uppercase;
+	background-color: #49abfe;
+	border: 1px solid #49abfe;
+	color: white;
+	font-weight: bold;
+}
+.content-inactive .left{
+	padding-top: 75px;
+	width: 275px;
+	float: left;
+	margin-left: 80px;
+}
+.content-inactive .right{
+	width: 275px;
+	float: right;
+	margin-right: 80px;
+	padding-top: 105px;
+}
+
+/****************************************************/
+/********* Active Content ***************************/
+/****************************************************/
+
+.content-active{
+	width: 460px;
+	height: 460px;
+	background-color: white;
+	color: #666666;
+
+	position: absolute;
+	top: -20px;
+	left: 440px;
+	-webkit-transition: -webkit-transform 1.5s;
+	transition: -webkit-transform 1.5s;
+	-o-transition: transform 1.5s;
+	transition: transform 1.5s;
+	transition: transform 1.5s, -webkit-transform 1.5s;
+}
+
+.content-active .content-wrapper h3{
+	position: relative;
+	font-size: 19px;	
+}
+.content-active .content-wrapper h3 img{
+	position: absolute;
+	bottom: -5px;
+	right: 0px;
+}
+.content-active .content-wrapper img{
+	padding-top: 34px;
+}
+
+/********* Form **********/
+.content-active .content-wrapper .error{
+	padding-top: 5px;
+	min-height: 30px;
+	width: 100%;
+	color: red;
+	font-size: 11px;
+	padding-bottom: 3px;
+}
+
+.content-active .content-wrapper form{
+	padding-top: 2px;
+}
+.content-active form input[type=submit]{
+	width: 140px;
+	height: 50px;
+	border-radius: 50px;
+	text-transform: uppercase;
+	background-color: #f89a35;
+	border: 1px solid #f89a35;
+	color: white;
+	font-weight: bold;
+	margin-top: 30px;
+}
+.content-active form input[type=submit]:active{
+	background-color: #f8bf35;
+	border: 1px solid #f8bf35;
+}
+.text-input{
+	padding: 8px 0 0 0;
+	display: block;
+	border: none;
+	border-bottom: 1px solid #ccc;
+	width: 100%;
+	outline: none;
+}
+input.text-input:invalid{
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+	border-bottom: 1px solid #ccc;
+}
+input:focus{
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+}
+
+
+.input-icon{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.content-active form .input-label, #forgot{
+	color: #8495b7;
+}
+.content-active form .input-label{
+	font-size: 12px;
+	font-weight: bold;
+	margin-top: 28px;
+	position: relative;
+	display: block;
+	width: 100%;
+}
+.content-active form .input-label span{
+	color: #f44368;
+}
+.content-active form > .input-label:first-child{
+	margin-top: 0px;
+}
+
+/********* Login/SignUp content specifics **********/
+
+.active-left,.active-right {
+	opacity: 1;
+	-webkit-transition: opacity 0.5s;
+	-o-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+.active-left{
+	margin: 65px 90px 0px 90px;
+}
+
+.active-right{
+	margin: 94px 90px 0 90px;
+}
+.login-button-wrapper{
+	position: relative;
+}
+#forgot{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	line-height: 50px;
+	font-size: 11px;
+}
+
+/********* Folds **********/
+
+.fold-middle{
+	background-color: #20293a;
+	width: 10px;
+	height: 420px;
+	position: absolute;
+	top: 20px;
+	left: -10px;
+	z-index: -1;
+}
+.fold-top{
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 0 20px 10px;
+	border-color: transparent transparent #89deff transparent;
+	position: absolute;
+	top: 0;
+	left: -10px;
+}
+.fold-bottom{
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 20px 0 0 10px;
+	border-color: #89deff transparent transparent transparent;
+	position: absolute;
+	bottom: 0;
+	left: -10px;
+}
+
+/********* Footer **********/
+
+.footer{
+	margin-top: 130px;
+	color: #2f3d5a;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 9px;
+	font-weight: bold;
+	opacity: 0.5;
+}
+
+/****************************************************/
+/********* Responsive design ************************/
+/****************************************************/
+
+@media(max-width: 960px){
+	body{
+		background: #eeeeee;
+	}
+	.background-wrapper{
+	height: 440px;
+	width: 100%;
+	}
+	/********* Inactive Content *********/
+	.page-wrapper{
+		width: 100%;
+		height: 100%;
+		min-height: 880px;
+		margin-top: 0;
+	}
+
+	.content-inactive{
+		width: 100%;
+		height: 100%;
+		min-height: 870px;
+	}
+
+	.content-inactive button{
+		width: 100%;
+		max-width: 140px;
+	}
+	.content-inactive .left{
+		padding-top: 75px;
+		width: 80%;
+		max-width: 275px;
+		float: none;
+		margin: auto;
+	}
+	.content-inactive .right{
+		width: 80%;
+		max-width: 275px;
+		float: none;
+		margin: auto;
+		padding-top: 220px;
+	}
+	.content-inactive .right button{
+		margin-bottom: 10px;
+	}
+	/********* Active Content *********/
+
+	.content-active{
+		width: 100%;
+		height: 440px;
+		top: 420px;
+		left: 0px;
+	}
+
+	/********* Login/SignUp content specifics **********/
+
+	.active-left,.active-right {
+		width: 80%;
+		max-width: 275px;
+	}
+	.active-left{
+		margin: 65px auto;
+	}
+
+	.active-right{
+		margin: 94px auto;
+	}
+
+	/********* Folds **********/
+
+	.fold-middle{
+		display: none;
+	}
+	.fold-top{
+		display: none;
+	}
+	.fold-bottom{
+		display: none;
+	}
+
+	/********* Footer **********/
+
+	.footer{
+		margin-top: 0px;
+		padding: 0 0 10px 0;
+		background-color: #1b2347;
+		opacity: 0.9;
+	}
+}
+@media(max-width: 235px){
+	.login-button-wrapper{
+		position: relative;
+		text-align: center;
+	}
+	#forgot{
+		right: 0;
+		left: 0;
+		bottom: auto;
+		margin: auto;
+		display: absolute;
+		text-align: center;
+		line-height: 50px;
+		font-size: 11px;
+	}
+	.content-inactive .left {
+	    padding-top: 10px;
+	    width: 90%;
+	}
+	.content-inactive .right {
+    	padding-top: 130px;
+    	width: 90%;
+	}
+}
+
+/****************************************************/
+/********* Icons ************************************/
+/****************************************************/
+
+.icon-name-inactive{
+	background: url('../images/icons.png') no-repeat -32px -0px;
+	width: 14px;
+	height: 17px;
+}
+.icon-email-inactive{
+	background: url('../images/icons.png') no-repeat 0 -3px;
+	width: 16px;
+	height: 14px;
+}
+.icon-password-inactive{
+	background: url('../images/icons.png') no-repeat -16px 0px;
+	width: 16px;
+	height: 17px;
+}
+.icon-name-active{
+	background: url('../images/icons.png') no-repeat -32px -18px;
+	width: 14px;
+	height: 16px;
+}
+.icon-email-active{
+	background: url('../images/icons.png') no-repeat 0 -20px;
+	width: 16px;
+	height: 14px;
+}
+.icon-password-active{
+	background: url('../images/icons.png') no-repeat -16px -17px;
+	width: 16px;
+	height: 17px;
+}
+
+/********* Helper classes **********/
+
+.hidden {
+    display: none !important;
+}
+.invisible{
+	opacity: 0;
+}

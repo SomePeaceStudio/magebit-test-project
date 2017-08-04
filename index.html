@@ -1,0 +1,99 @@
+<!--
+require_once 'dbconfig.php';    
+if($user->is_loggedin()){
+ 	$user->redirect('home.php');
+}
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Magebit</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="all">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<!--[if lt IE 9]>
+	<script src="script/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class="background-wrapper"><div class="page-background"></div></div>
+	<div class="page-wrapper">
+		<div class="content-inactive">
+			<div class="left">
+				<h3>Don't have an account?</h3>
+				<img src="images/line.jpg" alt="line">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum sem eu felis sollicitudin blandit. Maecenas at pharetra massa, at interdum metus.</p>
+				<button onclick="changeActiveContent('signup')">sign up</button>
+			</div>
+			<div class="right">
+				<h3>Have an account?</h3>
+				<img src="images/line.jpg" alt="line">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum amet.</p>
+				<button onclick="changeActiveContent('login')">login</button>
+			</div>
+		</div>
+		<div class="content-active">
+			<div class="content-wrapper active-left invisible hidden" id="signup">
+				<h3>Sign Up<img src="images/logo.png" alt="logo"></h3>
+				<img src="images/line.jpg" alt="line">
+				<div class="error"></div>
+				<form method="POST">
+					<div class="input-label">
+						<label>Name:<span>*</span></label>
+						<div class="input-icon icon-name-inactive"></div>
+					</div>
+					<input class="text-input" type="text" name="txt_name" 
+						value="" 
+						pattern="^ *[a-zA-Z]+ +[a-zA-Z]+ *[a-zA-Z]* *" 
+						title="Name <Middle-name> Surname" required>
+					<div class="input-label">
+						<label>Email:<span>*</span></label>
+						<div class="input-icon icon-email-inactive"></div>
+					</div>
+					<input class="text-input" type="email" name="txt_email" 
+						value="" required>
+					<div class="input-label">
+						<label>Password:<span>*</span></label>
+						<div class="input-icon icon-password-inactive"></div>
+					</div>
+					<input class="text-input" type="text" name="txt_password" value="" required>
+					<input type="submit" value="Submit" name="btn-signup">
+				</form> 
+			</div>
+			<div class="content-wrapper active-right" id="login">
+				<h3>Login<img src="images/logo.png" alt="logo"></h3>
+				<img src="images/line.jpg" alt="line">
+	            <div class="error"></div>
+				<form method="POST">
+					<div class="input-label">
+						<label>Email:<span>*</span></label>
+						<div class="input-icon icon-email-inactive"></div>
+					</div>
+					<input class="text-input" type="email" name="txt_email" 
+						value="" required>
+					<div class="input-label">
+						<label>Password:<span>*</span></label>
+						<div class="input-icon icon-password-inactive"></div>
+					</div>
+					<input class="text-input" type="password" name="txt_password" value="" required>
+					<div class="login-button-wrapper">
+						<input type="submit" value="Login" name="btn-login">
+						<div id="forgot">Forgot?</div>
+					</div>
+				</form> 
+			</div>
+			<div class="fold-top"></div> 
+			<div class="fold-middle"></div> 
+			<div class="fold-bottom"></div>		
+		</div>
+	<div class="footer">All rights reserved "Magebit" 2016</div>
+	<div class="red"></div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
